@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/19568ad9a4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <title>My home</title>
+
+</head>
+
+<body>
+
+
+  <div class=" container">
+    <div class="main_left">
+
+      <div class="time">
+        <h1 id="current-time"> </h1>
+      </div>
+      <div class="containerAC">
+        <div class="acLocation">
+          <p class="p_home"> Home </p>
+          <p class="AC"> Air Conditioner </p>
+        </div>
+        <div class="flip-switch">
+          <input type="checkbox">
+        </div>
+      </div>
+      <div class="AC_temperature">
+
+        <button class="temp-buttons" id="decrement" onclick="stepper(this)"> &#8722 </button>
+        <input type="number" min="18" max="40" step="2" value="24" id="my-input" readonly>
+        <button class="temp-buttons" id="increment" onclick="stepper(this)"> + </button>
+
+
+      </div>
+      <div class="type_of_fan">
+        <button type="button" class="button_leaf">
+          <span class="button_leaf_icon">
+            <ion-icon name="leaf-outline"></ion-icon>
+          </span>
+          <span class="button_leaf_text">Eco </span>
+        </button>
+
+        <button type="button" class="button_cold">
+          <span class="button_cold_icon">
+            <ion-icon name="snow-outline"></ion-icon>
+          </span>
+          <span class="button_cold_text">Eco </span>
+        </button>
+
+        <button type="button" class="button_heat">
+          <span class="button_heat_icon">
+            <ion-icon name="flame-outline"></ion-icon>
+          </span>
+          <span class="button_heat_text">Eco </span>
+        </button>
+
+        <button type="button" class="button_auto">
+          <span class="button_auto_icon">
+            <ion-icon name="thermometer-outline"></ion-icon>
+          </span>
+          <span class="button_auto_text">Auto </span>
+        </button>
+
+      </div>
+      <div class="fan_intensity">
+        <input type="radio" name="size" id="fanXS" checked="checked">
+        <label for="fanXS">&nbsp; &nbsp; <ion-icon size="small" name="radio-button-on-outline"> </ion-icon> &nbsp;
+          &nbsp; Calm
+        </label><br>
+
+        <input type="radio" name="size" id="fansmall">
+        <label for="fansmall"> &nbsp; &nbsp; <ion-icon name="radio-button-on-outline"></ion-icon> &nbsp; &nbsp; Mild
+        </label><br>
+
+        <input type="radio" name="size" id="fanmedium">
+        <label for="fanmedium"><ion-icon size="large" name="radio-button-on-outline"></ion-icon> &nbsp; Moderate
+        </label><br>
+
+        <input type="radio" name="size" id="fanlarge">
+        <label for="fanlarge"><ion-icon size="large" name="radio-button-on-outline"></ion-icon> &nbsp; Strong
+        </label><br>
+
+        <input type="radio" name="size" id="fanextralarge">
+        <label for="fanextralarge"><ion-icon size="large" name="radio-button-on-outline"></ion-icon> &nbsp; Intense
+        </label><br>
+
+        <p class="Fan_Speed">Fan Speed</p>
+      </div>
+
+
+    </div>
+
+
+    <div class="main_right">
+      <div class="main_right-TOP">
+
+        <div class="categoies">
+          <div class="div-Dashboard">
+            <a class="categoies-link" href="https://www.linkedin.com/in/zmariux/">
+              Dashboard &#8794;
+            </a>
+          </div>
+          <div class="div-Security">
+            <a class="categoies-link" href="https://www.linkedin.com/in/zmariux/">
+              Security
+            </a>
+          </div>
+          <div class="Devices">
+            <a class="categoies-link" href="https://www.linkedin.com/in/zmariux/">
+              Devices
+            </a>
+          </div>
+          <div class="Statistics">
+            <a class="categoies-link" href="https://www.linkedin.com/in/zmariux/">
+              Statistics
+            </a>
+          </div>
+          <div class="Settings">
+            <a class="categoies-link" href="https://www.linkedin.com/in/zmariux/">
+              Settings
+            </a>
+          </div>
+        </div>
+
+        <div class="all_user">
+          <div class="user_account">
+            <p><i>Hello,</i> </p>
+            <a class="user-link" href="https://www.linkedin.com/in/zmariux/">
+              Marius Ciobanu!
+            </a>
+          </div>
+          <div class="user_logo">
+            <img class="logo" src="logo.png">
+
+          </div>
+        </div>
+      </div>
+      <div class="main_right-BOT">
+        <div class="dashboard-playground">
+          <img class="playground" src="weather.png">
+
+
+        </div>
+        <div class="widgets">
+          <div class="widgets-tab">
+            <div class="widgets-tab-left">
+              <p class="widgets-text"> Widgets </p>
+            </div>
+            <div class="widgets-tab-right">
+              <button class="widgets-options">
+                <ion-icon name="ellipsis-vertical-outline"></ion-icon> Edit
+              </button>
+            </div>
+
+          </div>
+          <div>
+            <div class="wifi">
+              <div class="wifi-title">
+                <p class="right-side-text-titles">Wi-Fi Connection: </p>
+              </div>
+              <div class="dropdown">
+                <div class="select">
+                  <span class="selected">Figma</span>
+                  <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                  <li>Framer</li>
+                  <li>Sketch</li>
+                  <li>Faker</li>
+                  <li class="active">Figma</li>
+                  <li>Raton</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="containers toDoList "> <!-- done  -->
+            <header class="text-left text-light my-4 todo-title-2">
+              <h1 class="right-side-text-titles">To do List:</h1>
+              <form class="search">
+                <input type="text" class="form-control m-auto" name="search" placeholder="Search todos">
+              </form>
+            </header>
+
+            <ul class="list-group todos mx-auto text-light">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Replace the center image with the actual function</span>
+                <i class="far fa-trash-alt delete"></i>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Learn how to integrate a music playlist</span>
+                <i class="far fa-trash-alt delete"></i>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Link it to devices</span>
+                <i class="far fa-trash-alt delete"></i>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Create a database</span>
+                <i class="far fa-trash-alt delete"></i>
+              </li>
+
+            </ul>
+
+            <form class="add text-center ">
+              <input class="form-control m-auto" type="text" name="add" placeholder="Add a new todo" />
+            </form>
+            <!-- music playlist -->
+          </div>
+          <div class="music">
+            <img class="media" src="media.png">
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"> </script>
+  <script>
+    let time = document.getElementById("current-time");
+    setInterval(() => {
+      let d = new Date();
+      time.innerHTML = d.toLocaleTimeString()
+    }, 1000)
+  </script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"
+    integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+    integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
